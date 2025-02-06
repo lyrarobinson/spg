@@ -5,7 +5,8 @@ import time
 def initialize_cameras():
     """Initialise all webcams and return their capture objects."""
     caps = []
-    for i in range(0, 3):  
+    camera_inidices = [0, 2, 4]
+    for i in camera_indices:  
         cap = cv2.VideoCapture(i)
         cap.set(cv2.CAP_PROP_FPS, 24)
         if not cap.isOpened():
